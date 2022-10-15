@@ -4,6 +4,7 @@ import SignUp from "./SignUp";
 import Login from "./Login";
 import NavBar from "./NavBar";
 import Home from "./Home";
+import VillaPage from "./VillaPage";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -22,7 +23,7 @@ function App() {
     <>
       <NavBar user={user} setUser={setUser} />
       <main>
-        {user ? (
+      {user ? (
           <Switch>
             <Route path="/">
               <Home user={user}/>
@@ -36,6 +37,9 @@ function App() {
             <Route path="/login">
               <Login setUser={setUser} />
             </Route>
+            <Route path="/villapage">
+              <VillaPage />
+            </Route>
             <Route path="/">
               <Home />
             </Route>
@@ -43,6 +47,8 @@ function App() {
         )}
       </main>
     </>
+      
+ 
   );
 }
 
