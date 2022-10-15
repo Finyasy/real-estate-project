@@ -1,8 +1,31 @@
-# Project Template: React/Rails API
+# REAL ESTATE PROJECT: React/Rails API
+
+## By Bryan Bosire
+
+## Landing Page
+![LandingPage](./client/src/assets/LandingPage.png)
+
+## Entity Relationship Diagram(ERD)
+![ERD](./client/src/assets/ERD.png)
+
+## Table of Content
+- [Live Link](#live-link)
+- [Description](#description)
+- [Requirements](#requirements)
+- [Setup](#setup)
+- [Deploying](#deploying)
+- [Environment Setup](#environment-setup)
+- [Troubleshooring](#troubleshooting)
+- [License](#license)
+
+## Live Link
+Click this link to see the live website [Live Link](https://real-estate-projec.herokuapp.com/)
 
 ## Description
+Ths project is a real estate website where users can view properties and contact 
+the owner of the property.
 
-This project is scaffolded so that you can build a React frontend and Rails
+The project is scaffolded so that you can build a React frontend and Rails
 backend together, and easily deploy them to Heroku.
 
 ## Requirements
@@ -17,38 +40,10 @@ don't already have them.
 
 ## Setup
 
-Start by **cloning** (not forking) the project template repository and removing
-the remote:
+Start by cloning the project template repository:
 
 ```console
-$ git clone git@github.com:learn-co-curriculum/project-template-react-rails-api.git your-project-name
-$ cd your-project-name
-$ git remote rm origin
-```
-
-Then, [create a new remote repository][create repo] on GitHub. Head to
-[github.com](https://github.com) and click the **+** icon in the top-right
-corner and follow the steps to create a new repository. **Important**: don't
-check any of the options such as 'Add a README file', 'Add a .gitignore file',
-etc — since you're importing an existing repository, creating any of those files
-on GitHub will cause issues.
-
-[create repo]: https://docs.github.com/en/github/importing-your-projects-to-github/importing-source-code-to-github/adding-an-existing-project-to-github-using-the-command-line#adding-a-project-to-github-without-github-cli
-
-If you're working with a partner,
-[add them as a collaborator][add collaborator] on GitHub. From your repo on
-GitHub, go to Settings > Manage Access > Invite a collaborator and enter your
-partner's username. Once your partner has access, they should git **clone** (not
-fork) the repository.
-
-[add collaborator]: https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository
-
-Finally, connect the GitHub remote repository to your local repository and push
-up your code:
-
-```console
-$ git remote add origin git@github.com:your-username/your-project-name.git
-$ git push -u origin main
+$ git clone git@github.com:Finyasy/real-estate-project.git
 ```
 
 When you're ready to start building your project, run:
@@ -65,17 +60,7 @@ You can use the following commands to run the application:
 - `npm start --prefix client`: run the frontend on
   [http://localhost:4000](http://localhost:4000)
 
-Make sure to also update this README to include documentation about
-your project. Here's a list of some [awesome readmes][] for inspiration.
-
-[awesome readmes]: https://github.com/matiassingers/awesome-readme
-
 ## Deploying
-
-This application has all the starter code needed to help you deploy your
-application to Heroku. It's recommended to deploy your project early and push up
-changes often to ensure that your code works equally well in production and
-development environments.
 
 If you've already set up your environment to deploy to Heroku, you can run the
 commands below to deploy your application. If not, make sure to check out the
@@ -132,17 +117,6 @@ Verify which version of Ruby you're running by entering this in the terminal:
 
 ```sh
 ruby -v
-```
-
-Make sure that the Ruby version you're running is listed in the [supported
-runtimes][] by Heroku. At the time of writing, supported versions are 2.6.8,
-2.7.4, or 3.0.2. Our recommendation is 2.7.4, but make sure to check the site
-for the latest supported versions.
-
-If it's not, you can use `rvm` to install a newer version of Ruby:
-
-```sh
-rvm install 2.7.4 --default
 ```
 
 You should also install the latest versions of `bundler` and `rails`:
@@ -288,34 +262,10 @@ brew services start postgresql
 If you ran into any errors along the way, here are some things you can try to
 troubleshoot:
 
-- If you're on a Mac and got a server connection error when you tried to run
-  `rails db:create`, one option for solving this problem for Mac users is to
-  install the Postgres app. To do this, first uninstall `postgresql` by running
-  `brew remove postgresql`. Next, download the app from the
-  [Postgres downloads page][postgres downloads page] and install it. Launch the
-  app and click "Initialize" to create a new server. You should now be able to
-  run `rails db:create`.
-
-- If you're using WSL and got the following error running `rails db:create`:
-
-  ```txt
-  PG::ConnectionBad: FATAL:  role "yourusername" does not exist
-  ```
-
-  The issue is that you did not create a role in Postgres for the default user
-  account. Check [this video](https://www.youtube.com/watch?v=bQC5izDzOgE) for
-  one possible fix.
-
-- If your app failed to deploy at the build stage, make sure your local
-  environment is set up correctly by following the steps at the beginning of
-  this lesson. Check that you have the latest versions of Ruby and Bundler, and
-  ensure that Postgresql was installed successfully.
-
-- If you deployed successfully, but you ran into issues when you visited the
-  site, make sure you migrated and seeded the database. Also, make sure that
-  your application works locally and try to debug any issues on your local
-  machine before re-deploying. You can also check the logs on the server by
-  running `heroku logs`.
+- If you are getting the error message when trying to deploy to heroku about not suppoting ruby 2.7.4, Run this in your terminal
+```sh
+heroku stack:set heroku-20
+```
 
 For additional support, check out these guides on Heroku:
 
@@ -325,3 +275,11 @@ For additional support, check out these guides on Heroku:
 [postgres downloads page]: https://postgresapp.com/downloads.html
 [heroku rails deploying guide]: https://devcenter.heroku.com/articles/getting-started-with-rails6
 [troubleshooting guide on heroku]: https://devcenter.heroku.com/articles/getting-started-with-rails6#troubleshooting
+
+## License
+
+---
+
+MIT License
+
+Copyright (c) [2022] [Bryan Bosire]
