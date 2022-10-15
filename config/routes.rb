@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
   
-  resources :users
+  resources :villas
+  resources :users, only: [:index, :new, :create, :show]
+
+
+  # VILLA ROUTES
+  get '/villas', to: 'villas#index'
+  get '/villas/new', to: 'villas#new'
+  post '/villas', to: 'villas#create'
+  get '/villas/:id', to: 'villas#show'
+
+
+  # USERS ROUTES
 
   # POST /signup
   post '/signup', to: 'users#create'
